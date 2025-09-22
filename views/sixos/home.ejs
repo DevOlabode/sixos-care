@@ -2,7 +2,7 @@
 <%- layout('./layout/boilerplate.ejs') %>
 
 <body class="bg-gray-50">
-    <header class="bg-white shadow-sm">
+    <header class="bg-white-shadow-sm" >
 
         <div class="bg-blue-900 text-white py-2 px-4">
             <div class="container mx-auto flex justify-between items-center text-sm">
@@ -18,7 +18,7 @@
     </header>
 
   
-    <div class="hero-section text-white py-20">
+<!--   
         <div class="container mx-auto px-4 text-center">
             <h1 class="text-5xl font-bold mb-4">Long Term Care Support</h1>
             <nav class="text-lg opacity-90">
@@ -26,8 +26,8 @@
                 <i class="fas fa-angle-right mx-3"></i>
                 <span>LONG TERM CARE SUPPORT</span>
             </nav>
-        </div>
-    </div>
+        </div> -->
+
     <div class="slideshow-container" id="slideshowContainer">
         <div class="slideshow-header">
             <div class="company-logo">
@@ -112,6 +112,170 @@
             <img src="/images/FamilyCare.jpg" class="thumbnail" onclick="currentSlide(6)" alt="Family Care">
         </div>
     </div>
+    
+          <div class="col-lg-10">
+                <div class="bottom">
 
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header bg-primary text-white">
+                            <h6 class="card-title mb-0">
+                                <i class="fas fa-clock me-2"></i>Working Hours
+                            </h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="working-hours">
+                                <div>Mon-Sat : 9:00 am to 5:00 pm</div>
+                                <div>Sunday : 10:00 am to 5:00 pm</div>
+                            </div>
+                        </div>
+                    </div>
+
+       
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header bg-danger text-white">
+                            <h6 class="card-title mb-0">
+                                <i class="fas fa-phone me-2"></i>Emergency Cases
+                            </h6>
+                        </div>
+                        <div class="card-body">
+                            <a href="tel:+14164194753" class="text-primary fw-bold fs-5 text-decoration-none">
+                                +1 (416) 419 4753; +1 (647) 512 3343 
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header bg-success text-white">
+                            <h6 class="card-title mb-0">
+                                <i class="fas fa-map-marker-alt me-2"></i>Alberta
+                            </h6>
+                        </div>
+                        <div class="card-body">
+                            <address class="mb-0">
+                                781 kootenay path Oshawa L1H0B1 <br>
+                                ALBERTA,Canada.
+                            </address>
+                        </div>
+                    </div>
+
+
+                    <div class="card mb-7 shadow-sm bg-primary bg-opacity-10">
+                        <div class="card-body text-center">
+                            <h6 class="card-title text-primary">Request Service</h6>
+                            <p class="card-text text-muted small">Need immediate staffing support? Contact us now.</p>
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contactModal">
+                                Request Service <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+ 
+    <div class="modal fade" id="contactModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Service Request Form</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="contactForm">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="firstName" class="form-label">First Name *</label>
+                                <input type="text" class="form-control" id="firstName" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="lastName" class="form-label">Last Name *</label>
+                                <input type="text" class="form-control" id="lastName" required>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="email" class="form-label">Email *</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="phone" class="form-label">Phone Number *</label>
+                                <input type="tel" class="form-control" id="phone" required>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="facilityName" class="form-label">Facility/Organization Name</label>
+                            <input type="text" class="form-control" id="facilityName">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="serviceType" class="form-label">Service Type Needed *</label>
+                            <select class="form-select" id="serviceType" required>
+                                <option value="">Select a service...</option>
+                                <option value="hospital-support">Hospital Support</option>
+                                <option value="long-term-care">Long Term Care Support</option>
+                                <option value="community-living">Community Living Support</option>
+                                <option value="home-care">Home Care</option>
+                                <option value="respite-care">Respite Care</option>
+                                <option value="memory-care">Memory Care</option>
+                                <option value="cleaning">Cleaning Services</option>
+                                <option value="cooking">Cooking Services</option>
+                                <option value="other">Other Services</option>
+                            </select>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="urgency" class="form-label">Urgency Level *</label>
+                                <select class="form-select" id="urgency" required>
+                                    <option value="">Select urgency...</option>
+                                    <option value="emergency">Emergency (within 2 hours)</option>
+                                    <option value="urgent">Urgent (within 24 hours)</option>
+                                    <option value="routine">Routine (within 1 week)</option>
+                                    <option value="planned">Planned (flexible timing)</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="duration" class="form-label">Expected Duration</label>
+                                <select class="form-select" id="duration">
+                                    <option value="">Select duration...</option>
+                                    <option value="one-time">One-time service</option>
+                                    <option value="short-term">Short-term (1-4 weeks)</option>
+                                    <option value="medium-term">Medium-term (1-6 months)</option>
+                                    <option value="long-term">Long-term (6+ months)</option>
+                                    <option value="permanent">Permanent placement</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="staffingNeeds" class="form-label">Specific Staffing Needs</label>
+                            <textarea class="form-control" id="staffingNeeds" rows="3" placeholder="Please describe your specific staffing requirements, shift times, qualifications needed, etc."></textarea>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="additionalInfo" class="form-label">Additional Information</label>
+                            <textarea class="form-control" id="additionalInfo" rows="3" placeholder="Any additional details or special requirements..."></textarea>
+                        </div>
+
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="checkbox" id="terms" required>
+                            <label class="form-check-label" for="terms">
+                                I agree to the terms of service and privacy policy *
+                            </label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" form="contactForm" class="btn btn-primary">Submit Request</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
 </body>
 </html>
