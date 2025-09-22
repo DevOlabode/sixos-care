@@ -1,10 +1,19 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+    
+    <link rel="stylesheet" href="stylehome.css">
+    </head>
 <%- layout('./layout/boilerplate.ejs') %>
 
 <body class="bg-gray-50">
     <header class="bg-white-shadow-sm" >
 
-        <div class="bg-blue-900 text-white py-2 px-4">
+        <div class="top-bar bg-blue-900 text-white py-2 px-4">
             <div class="container mx-auto flex justify-between items-center text-sm">
                 <div class="flex items-center space-x-4">
                     <span><i class="fas fa-map-marker-alt"></i>781 Kootenay path, Oshawa L1H0B1 Canada.</span>
@@ -54,7 +63,8 @@
             </div>
 
             <div class="slide">
-                <img src="/images/MedicalTeam.jpg" alt="Professional Medical Team">
+                <div class="slide-img">
+                <img src="/images/MedicalTeam.jpg" alt="Professional Medical Team"></div>
                 <div class="service-badge">Expert Care</div>
                 <div class="slide-content">
                     <div class="slide-title">Dedicated Healthcare Professionals</div>
@@ -63,7 +73,8 @@
             </div>
 
             <div class="slide">
-                <img src="" alt="Advanced Medical Technology">
+                <div class="slide-img">
+                <img src="" alt="Advanced Medical Technology"></div>
                 <div class="service-badge">Technology</div>
                 <div class="slide-content">
                     <div class="slide-title">Advanced Medical Technology</div>
@@ -72,7 +83,7 @@
             </div>
 
             <div class="slide">
-                <img src="/Nruse.png" alt="Patient Care">
+                <img src="" alt="Patient Care">
                 <div class="service-badge">Patient Care</div>
                 <div class="slide-content">
                     <div class="slide-title">Comprehensive Patient Care</div>
@@ -81,7 +92,9 @@
             </div>
 
             <div class="slide">
-                <img src="/images/EmergencyCare.jpg" alt="Emergency Care">
+                <div class="slide-img">
+                    <img src="/images/EmergencyCare.jpg" alt="Emergency Care">
+                </div>
                 <div class="service-badge">Emergency</div>
                 <div class="slide-content">
                     <div class="slide-title">24/7 Emergency Services</div>
@@ -90,7 +103,8 @@
             </div>
 
             <div class="slide">
-                <img src="/images/FamilyHealthcare.jpg" alt="Family Healthcare">
+                <div class="slide-img">
+                <img src="/images/FamilyHealthcare.jpg" alt="Family Healthcare"></div>
                 <div class="service-badge">Family Care</div>
                 <div class="slide-content">
                     <div class="slide-title">Family-Centered Healthcare</div>
